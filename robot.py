@@ -1,7 +1,7 @@
 import time
 class Robot():
     __name = "<unnamed>"
-    __power = False
+    __power = 'running'
     __current_speed = 0
     __battery_level = 0
     __states = ['shutown', 'running']
@@ -71,7 +71,7 @@ class Robot():
     def stop(self):
       self.set_speed = 0
 
-    def resume(self) :
+    def status(self) :
         print("Hy, i am "+ str(self.name) )
         print("Etat "+ str(self.state) )
         print("Battery : " + str(self.battery))
