@@ -22,7 +22,7 @@ class Word_Army():
 class French_armee():
     def __init__(self,name ) :
         self.name =name     
-    def say_my_name(self) :
+    def say_my_name_2(self) :
         print("Si tu as dis",self.name,"tu as raison nom de dieu !!!")
 
 
@@ -67,12 +67,14 @@ if __name__=="__main__" :
     Predator1.moves()
     Predator1.do_your_job()
     Predator1.say_my_name()
+    Predator1.say_my_name_2()
     print("-------")
     Predator2.moves()
     Predator2.do_your_job()
     Predator2.say_my_name()
+    Predator2.say_my_name_2()
     print("-------")
     Predator3.moves()
     Predator3.do_your_job()
     Predator3.say_my_name()
-
+    Predator3.say_my_name_2()
