@@ -1,6 +1,6 @@
 	
 from abc import ABCMeta, abstractmethod
-
+#-------------------class to show classe abstraite and héritage multiple-------------------
 class Unmanned(metaclass=ABCMeta) :
     @abstractmethod
     def do_your_job(self):
@@ -11,7 +11,7 @@ class Vehicle(metaclass=ABCMeta):
     def moves(self) :
 
         pass
-
+#-------------------class to show the polymorphisme and héritage multiple-------------------
 class Word_Army():
     def __init__(self,name ) :
         self.name =name
