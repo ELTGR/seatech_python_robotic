@@ -1,0 +1,78 @@
+	
+from abc import ABCMeta, abstractmethod
+
+class Unmanned(metaclass=ABCMeta) :
+    @abstractmethod
+    def do_your_job(self):
+        pass
+
+
+class Vehicle(metaclass=ABCMeta): 
+    @abstractmethod
+    def moves(self) :
+
+        pass
+
+class Word_Army():
+    def __init__(self,name ) :
+        self.name =name
+    def say_my_name(self) :
+        print("if you said",self.name,"you're goddamn right !!!")
+
+class French_armee():
+    def __init__(self,name ) :
+        self.name =name     
+    def say_my_name(self) :
+        print("Si tu as dis",self.name,"tu as raison nom de dieu !!!")
+
+
+class UAV(Unmanned,Vehicle,French_armee,Word_Army):    
+    """Unmanned Aerial Vehicle"""
+    def __init__(self,name) :
+        French_armee.__init__(self,name)
+        Word_Army.__init__(self,name)
+    def moves(self) :
+        print("I fly like a bird, or like a bomber with death for engine")
+
+    def do_your_job(self):
+        print("I did my job, i bombed the houthis, i bring them the democracy")
+   
+class UUV(Unmanned,Vehicle,French_armee,Word_Army):
+    """Unmanned Undersea Vehicle"""
+    def __init__(self,name) :
+        French_armee.__init__(self,name)
+        Word_Army.__init__(self,name) 
+    def moves(self) :
+        print("I swim like a fish, or a nuclear submarine with death for engine")
+
+    def do_your_job(self):
+        print("I did my job, i bombed the houthis, i bring them the democracy")  
+
+class UGV(Unmanned,Vehicle,French_armee,Word_Army):
+    """Unmanned Ground Vehicle"""
+    def __init__(self,name) :
+        French_armee.__init__(self,name)
+        Word_Army.__init__(self,name)
+    def moves(self) :
+        print("I move like a snake, or like a  M1 Abrams with death for engine")
+
+    def do_your_job(self):
+        print("I did my job, i shoot the houthis, i bring them the democracy")  
+
+if __name__=="__main__" :
+    Predator1 = UAV("Dewey")
+    Predator2 = UUV("Maclom")
+    Predator3 = UGV("Reese")
+    print("-------")
+    Predator1.moves()
+    Predator1.do_your_job()
+    Predator1.say_my_name()
+    print("-------")
+    Predator2.moves()
+    Predator2.do_your_job()
+    Predator2.say_my_name()
+    print("-------")
+    Predator3.moves()
+    Predator3.do_your_job()
+    Predator3.say_my_name()
+
